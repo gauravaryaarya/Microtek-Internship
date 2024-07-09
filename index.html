@@ -3,136 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Portal - Document Upload and Data Entry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .form-section {
-            margin-bottom: 20px;
-        }
-        .form-section h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .form-group input[type="file"] {
-            padding: 0;
-        }
-        .button-group {
-            margin-top: 20px;
-        }
-        .button-group button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Vendor Data Entry Form</title>
 </head>
 <body>
+    <h1>Vendor Data Entry Form</h1>
+    <form id="vendorForm">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required>
 
-<form id="vendorForm">
-    <div class="form-section">
-        <h2>Vendor Information</h2>
-        <div class="form-group">
-            <label for="companyName">Company Name</label>
-            <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name" required>
-        </div>
-        <div class="form-group">
-            <label for="companyCode">Company Code</label>
-            <input type="text" id="companyCode" name="companyCode" placeholder="Enter Company Code" required>
-        </div>
-        <div class="form-group">
-            <label for="state">State</label>
-            <select id="state" name="state" required>
-                <option value="">Select State</option>
-                <!-- Add options for states here -->
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" placeholder="Enter City" required>
-        </div>
-        <div class="form-group">
-            <label for="pin">PIN Code</label>
-            <input type="text" id="pin" name="pin" placeholder="Enter PIN Code" required>
-        </div>
-        <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
-        </div>
-    </div>
+        <label for="gstNumber">GST Number:</label>
+        <input type="text" id="gstNumber" name="gstNumber" required>
 
-    <div class="form-section">
-        <h2>Bank Details</h2>
-        <div class="form-group">
-            <label for="accountHolderName">Account Holder Name</label>
-            <input type="text" id="accountHolderName" name="accountHolderName" placeholder="Enter Account Holder Name" required>
-        </div>
-        <div class="form-group">
-            <label for="accountNumber">Account Number</label>
-            <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter Account Number" required>
-        </div>
-        <div class="form-group">
-            <label for="ifscCode">IFSC Code</label>
-            <input type="text" id="ifscCode" name="ifscCode" placeholder="Enter IFSC Code" required>
-        </div>
-    </div>
+        <label for="panNumber">PAN Number:</label>
+        <input type="text" id="panNumber" name="panNumber" required>
 
-    <div class="form-section">
-        <h2>Payment Terms</h2>
-        <div class="form-group">
-            <label for="paymentTerm">Payment Term</label>
-            <input type="text" id="paymentTerm" name="paymentTerm" placeholder="Enter Payment Term" required>
-        </div>
-    </div>
+        <label for="address">Full Address:</label>
+        <input type="text" id="address" name="address" required>
 
-    <div class="form-section">
-        <h2>Document Upload</h2>
-        <div class="form-group">
-            <label for="gstCertificate">GST Certificate</label>
-            <input type="file" id="gstCertificate" name="gstCertificate" accept=".pdf, .jpg, .png" required>
-        </div>
-        <div class="form-group">
-            <label for="panCard">PAN Card</label>
-            <input type="file" id="panCard" name="panCard" accept=".pdf, .jpg, .png" required>
-        </div>
-        <div class="form-group">
-            <label for="aadhaarCard">Aadhaar Card</label>
-            <input type="file" id="aadhaarCard" name="aadhaarCard" accept=".pdf, .jpg, .png" required>
-        </div>
-        <div class="form-group">
-            <label for="cancelledCheque">Cancelled Cheque</label>
-            <input type="file" id="cancelledCheque" name="cancelledCheque" accept=".pdf, .jpg, .png" required>
-        </div>
-        <div class="form-group">
-            <label for="additionalDocuments">Additional Documents</label>
-            <input type="file" id="additionalDocuments" name="additionalDocuments" accept=".pdf, .jpg, .png" multiple>
-        </div>
-    </div>
+        <label for="aadhaarNumber">Aadhaar Number:</label>
+        <input type="text" id="aadhaarNumber" name="aadhaarNumber" required>
 
-    <div class="button-group">
-        <button type="submit">Submit</button>
+        <label for="bankAccountHolder">Bank Account Holder Name:</label>
+        <input type="text" id="bankAccountHolder" name="bankAccountHolder" required>
+
+        <label for="bankAccountNumber">Bank Account Number:</label>
+        <input type="text" id="bankAccountNumber" name="bankAccountNumber" required>
+
+        <label for="ifscCode">IFSC Code:</label>
+        <input type="text" id="ifscCode" name="ifscCode" required>
+
+        <label for="companyCode">Company Code:</label>
+        <input type="text" id="companyCode" name="companyCode" required>
+
+        <label for="paymentTerm">Payment Term:</label>
+        <input type="text" id="paymentTerm" name="paymentTerm" required>
+
+        <label for="documents">Upload Documents:</label>
+        <input type="file" id="documents" name="documents" accept=".pdf,.jpg,.png" multiple required>
+
+        <button type="button" onclick="processOCR()">Submit</button>
         <button type="reset">Reset</button>
-    </div>
-</form>
+    </form>
 
+    <script src="ocrIntegration.js"></script>
 </body>
 </html>
